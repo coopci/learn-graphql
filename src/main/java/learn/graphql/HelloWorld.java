@@ -34,7 +34,7 @@ public class HelloWorld {
 
         GraphQL build = GraphQL.newGraphQL(graphQLSchema).build();
         // ExecutionResult executionResult = build.execute("{hello}");
-        ExecutionResult executionResult = build.execute("query { dogs(name:\"sdfs\"){name} }");
+        ExecutionResult executionResult = build.execute("query {hello dogs(name:\"sdfs\"){name} }");
 
         System.out.println(executionResult.getData().toString());
         if (!executionResult.getErrors().isEmpty()) {
